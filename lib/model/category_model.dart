@@ -16,21 +16,21 @@ class CategoryModel {
       CategoryModel(
           name: 'Salad',
           iconPath: './assets/icon/plate.svg',
-          boxColor: Colors.yellow.shade100),
+          boxColor: const Color.fromARGB(255, 100, 207, 125)),
     );
 
     category.add(
       CategoryModel(
           name: 'Salad',
           iconPath: './assets/icon/pie.svg',
-          boxColor: Colors.yellow.shade400),
+          boxColor: const Color.fromARGB(255, 89, 83, 119)),
     );
 
     category.add(
       CategoryModel(
           name: 'Salad',
           iconPath: './assets/icon/plate.svg',
-          boxColor: Colors.yellow.shade200),
+          boxColor: const Color.fromARGB(255, 229, 123, 194)),
     );
     category.add(
       CategoryModel(
@@ -42,7 +42,7 @@ class CategoryModel {
       CategoryModel(
           name: 'Salad',
           iconPath: './assets/icon/plate.svg',
-          boxColor: Colors.yellow.shade600),
+          boxColor: const Color.fromARGB(255, 184, 50, 50)),
     );
 
     return category;
