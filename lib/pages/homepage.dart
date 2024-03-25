@@ -118,6 +118,7 @@ class _HomepageState extends State<Homepage> {
                                   padding: const EdgeInsets.all(8.0),
                                   child:
                                       // SvgPicture.asset('./assets/icon/pie.svg'),
+                                      // TODO: always remeber to double or triple check the model data in order to render the SVG assets and avoid the white screen issue again.
                                       SvgPicture.asset(
                                           categories[index].iconPath),
                                 ),
