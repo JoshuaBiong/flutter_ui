@@ -72,6 +72,7 @@ class _HomepageState extends State<Homepage> {
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const MySearchBar(),
+          //-------------------------- Category Section
           Column(
             // crossAxisAlignment: CrossAxisAlignment.end,
             children: [
