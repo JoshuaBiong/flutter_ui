@@ -88,22 +88,48 @@ class _HomepageState extends State<Homepage> {
                     ),
                   ),
                   const SizedBox(height: 15.0),
-                  Container(
+                  SizedBox(
                     height: 150.0,
-                    color: Colors.green,
-                    child: ListView.builder(itemBuilder: (context, index) {
-                      return Container();
-                    }),
+                    // color: Colors.green,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      separatorBuilder: (context, index) => const SizedBox(
+                        width: 25.0,
+                      ),
+                      padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                      itemCount: categories.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          width: 100,
+                          decoration: BoxDecoration(
+                            color: categories[index].boxColor,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                height: 50,
+                                width: 50,
+                                decoration: const BoxDecoration(
+                                    color: Colors.white,
+                                    shape: BoxShape.circle),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child:
+                                      // SvgPicture.asset('./assets/icon/pie.svg'),
+                                      SvgPicture.asset(
+                                          categories[index].iconPath),
+                                ),
+                                // child: SvgPicture.asset(
+                                //     categories[index].iconPath),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
                   )
-                  // Container(
-                  //   height: 150.0,
-                  //   color: Colors.green,
-                  //   child: ListView.builder(
-                  //     itemBuilder: (context, index) {
-                  //       return Container();
-                  //     },
-                  //   ),
-                  // )
                 ],
               )
             ],
